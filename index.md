@@ -1,4 +1,4 @@
-### Below is some information on usage of the Mumble Melody app: 
+### Below is some information on usage of the Mumble Melody app~: 
 
 ![Fig1](/images/Fig1.png)
 
