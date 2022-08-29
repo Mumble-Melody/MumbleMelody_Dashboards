@@ -1,4 +1,4 @@
 # MumbleMelody_Dashboards
 
-![image](/images/Fig1.jpg)
+![image](/images/Fig1.png)
 
