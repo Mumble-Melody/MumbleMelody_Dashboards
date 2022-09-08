@@ -38,6 +38,7 @@ jobs:
           python-version: 3.8 #install the python needed
           cache: 'pip'
       - run: pip install firebase_admin
+      - run: pip install numpy
       - name: Run script
         run: python continuousplots_MumbleMelody.py
 
