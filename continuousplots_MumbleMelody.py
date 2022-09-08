@@ -25,11 +25,8 @@ from bokeh.resources import CDN
 from bokeh.embed import file_html
 
 # Initialize the app with a service account, granting admin privileges
-FIREBASE_PRIVATE_KEY_ID = os.environ['FIREBASE_PRIVATE_KEY_ID']
-FIREBASE_PRIVATE_KEY = os.environ['FIREBASE_PRIVATE_KEY']
-
-env_var = os.environ
-print(env_var)
+FIREBASE_PRIVATE_KEY_ID = os.environ.get['FIREBASE_PRIVATE_KEY_ID']
+FIREBASE_PRIVATE_KEY = os.environ.get['FIREBASE_PRIVATE_KEY']
 
 import json
 
