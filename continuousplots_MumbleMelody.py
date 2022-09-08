@@ -32,7 +32,7 @@ import json
 
 with open('mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json', 'r+') as f:
     firebase_json = json.load(f)
-    firebase_json['private_key_id'] = str(FIREBASE_PRIVATE_KEY)
+    firebase_json['private_key_id'] = str(FIREBASE_PRIVATE_KEY_ID)
     firebase_json['private_key'] = "-----BEGIN PRIVATE KEY-----\n" + str(FIREBASE_PRIVATE_KEY) + "=\n-----END PRIVATE KEY-----\n"
 
 cred = credentials.Certificate(firebase_json)
