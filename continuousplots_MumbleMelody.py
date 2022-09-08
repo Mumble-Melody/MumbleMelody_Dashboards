@@ -7,7 +7,7 @@ from datetime import date
 from datetime import timedelta
 import numpy as np
 import matplotlib.pyplot as plt
-#import os
+import os
 #from os.path import exists
 from itertools import compress
 
@@ -25,7 +25,7 @@ from bokeh.resources import CDN
 from bokeh.embed import file_html
 
 # Initialize the app with a service account, granting admin privileges
-#os.system('pwd')
+os.system('pwd')
 cred = credentials.Certificate("mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://mumble-melody-longitudinal-default-rtdb.firebaseio.com/'
