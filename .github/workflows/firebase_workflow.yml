@@ -43,6 +43,7 @@ jobs:
       - run: pip install chromedriver_binary
       - run: pip install seaborn
       - run: pip install bokeh
+      - run: python -m json.tool mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json
       - name: Run script
         run: python continuousplots_MumbleMelody.py
 
