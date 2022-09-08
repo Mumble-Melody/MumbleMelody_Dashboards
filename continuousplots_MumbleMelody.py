@@ -30,12 +30,12 @@ from bokeh.embed import file_html
 
 #import json
 #
-#with open('mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json', 'r+') as f:
-#    firebase_json = json.load(f)
+with open('mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json', 'r+') as f:
+    firebase_json = json.load(f)
 #    firebase_json['private_key_id'] = str(os.environ['FIREBASE_PRIVATE_KEY_ID'])
 #    firebase_json['private_key'] = "-----BEGIN PRIVATE KEY-----\n" + str(os.environ['FIREBASE_PRIVATE_KEY']) + "=\n-----END PRIVATE KEY-----\n"
 #
-#print(firebase_json)
+print(firebase_json)
 
 cred = credentials.Certificate("mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json")
 firebase_admin.initialize_app(cred, {
