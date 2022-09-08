@@ -28,7 +28,9 @@ from bokeh.embed import file_html
 FIREBASE_PRIVATE_KEY_ID = os.environ['FIREBASE_PRIVATE_KEY_ID']
 FIREBASE_PRIVATE_KEY = os.environ['FIREBASE_PRIVATE_KEY']
 
+print("firebase key")
 print(FIREBASE_PRIVATE_KEY_ID)
+print("end")
 
 import json
 
