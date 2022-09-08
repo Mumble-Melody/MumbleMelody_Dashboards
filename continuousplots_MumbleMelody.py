@@ -25,8 +25,17 @@ from bokeh.resources import CDN
 from bokeh.embed import file_html
 
 # Initialize the app with a service account, granting admin privileges
-os.system('pwd')
-cred = credentials.Certificate("mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json")
+FIREBASE_PRIVATE_KEY_ID = os.environ['FIREBASE_PRIVATE_KEY_ID']
+FIREBASE_PRIVATE_KEY = os.environ['FIREBASE_PRIVATE_KEY']
+
+import json
+
+with open('mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json', 'r+') as f:
+    firebase_json = json.load(f)
+    firebase_json['private_key_id'] = str(FIREBASE_PRIVATE_KEY)
+    firebase_json['private_key'] = "-----BEGIN PRIVATE KEY-----\n" + str(FIREBASE_PRIVATE_KEY) + "=\n-----END PRIVATE KEY-----\n"
+    
+cred = credentials.Certificate(firebase_json)
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://mumble-melody-longitudinal-default-rtdb.firebaseio.com/'
 })
