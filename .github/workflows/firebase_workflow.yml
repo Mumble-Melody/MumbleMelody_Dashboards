@@ -37,6 +37,7 @@ jobs:
       - run: pip install chromedriver_binary
       - run: pip install seaborn
       - run: pip install bokeh
+      - run: pip install IPython
       - name: Replace tokens
         uses: cschleiden/replace-tokens@v1
         env:
