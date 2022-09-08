@@ -24,6 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Replace tokens
         uses: cschleiden/replace-tokens@v1.1
         with:
@@ -31,7 +32,6 @@ jobs:
         env:
           FIREBASE_PRIVATE_KEY_ID: ${{ secrets.FIREBASE_PRIVATE_KEY_ID }}
           FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
-      - uses: actions/checkout@v2
       - name: setup python
         uses: actions/setup-python@v2
         with:
