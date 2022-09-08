@@ -39,7 +39,8 @@ jobs:
           cache: 'pip'
       - run: pip install firebase_admin
       - run: pip install numpy
-      - run: pip install matplotlib  
+      - run: pip install matplotlib 
+      - run: pip install selenium
       - name: Run script
         run: python continuousplots_MumbleMelody.py
 
