@@ -7,8 +7,8 @@ from datetime import date
 from datetime import timedelta
 import numpy as np
 import matplotlib.pyplot as plt
-import os
-from os.path import exists
+#import os
+#from os.path import exists
 from itertools import compress
 
 from collections import OrderedDict
@@ -25,20 +25,20 @@ from bokeh.resources import CDN
 from bokeh.embed import file_html
 
 # Initialize the app with a service account, granting admin privileges
-os.system('pwd')
+#os.system('pwd')
 cred = credentials.Certificate("/Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://mumble-melody-longitudinal-default-rtdb.firebaseio.com/'
 })
 
-os.chdir('/Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards')
-os.system('/bin/rm images/Fig1.png')
-os.system('/bin/rm images/Fig2.png')
-os.system('/bin/rm images/Fig3.png')
-os.system('/bin/rm images/Fig4.png')
-os.system('/usr/bin/git -C a/Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards dd .')
-os.system('/usr/bin/git -C /Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards commit -m "remove old images"')
-os.system('pwd')
+#os.chdir('/Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards')
+#os.system('/bin/rm images/Fig1.png')
+#os.system('/bin/rm images/Fig2.png')
+#os.system('/bin/rm images/Fig3.png')
+#os.system('/bin/rm images/Fig4.png')
+#os.system('/usr/bin/git -C a/Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards dd .')
+#os.system('/usr/bin/git -C /Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards commit -m "remove old images"')
+#os.system('pwd')
 
 output_notebook()
 
@@ -51,9 +51,9 @@ current_datetime = datetime.now()
 today = current_datetime.date()
 today_string = str(today)
 today_save_filepath = 'images/'
-if exists(today_save_filepath) == False:
-    print(exists(today_save_filepath))
-    os.mkdir(today_save_filepath)
+#if exists(today_save_filepath) == False:
+#    print(exists(today_save_filepath))
+#    os.mkdir(today_save_filepath)
     
 #set start date
 startdate = date(2022, 7, 22)
@@ -518,6 +518,6 @@ p.xaxis.major_label_orientation = math.pi/2
 export_png(p, filename=(today_save_filepath + 'Fig4.png'))
 
 #Push changes to Github
-os.system('/usr/bin/git -C /Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards add .')
-os.system('/usr/bin/git -C /Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards commit -m "update figures today"')
-os.system('/usr/bin/git -C /Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards push')
+#os.system('/usr/bin/git -C /Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards add .')
+#os.system('/usr/bin/git -C /Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards commit -m "update figures today"')
+#os.system('/usr/bin/git -C /Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards push')
