@@ -41,6 +41,7 @@ jobs:
       - run: pip install numpy
       - run: pip install matplotlib 
       - run: pip install selenium
+      - run : pip install chromedriver_binary
       - name: Run script
         run: python continuousplots_MumbleMelody.py
 
