@@ -35,6 +35,8 @@ with open('mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json', 
     firebase_json['private_key_id'] = str(FIREBASE_PRIVATE_KEY)
     firebase_json['private_key'] = "-----BEGIN PRIVATE KEY-----\n" + str(FIREBASE_PRIVATE_KEY) + "=\n-----END PRIVATE KEY-----\n"
     
+print(firebase_json)
+
 cred = credentials.Certificate(firebase_json)
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://mumble-melody-longitudinal-default-rtdb.firebaseio.com/'
