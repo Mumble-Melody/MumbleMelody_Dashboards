@@ -15,7 +15,7 @@ atomicwrites==1.4.0
 attrs==19.3.0
 audioread==2.1.9
 autopep8 @ file:///tmp/build/80754af9/autopep8_1592412889138/work
-Babel==2.8.0
+babel>=2.9.1
 backcall==0.2.0
 backports.functools-lru-cache==1.6.1
 backports.shutil-get-terminal-size==1.0.0
@@ -24,7 +24,7 @@ backports.weakref==1.0.post1
 beautifulsoup4==4.9.1
 bitarray @ file:///opt/concourse/worker/volumes/live/9034c98d-f3e3-4444-48f0-092269ed9919/volume/bitarray_1594753940633/work
 bkcharts==0.2
-bleach==3.1.5
+bleach>=3.3.0
 bokeh @ file:///opt/concourse/worker/volumes/live/eb4a1f42-db74-4fc3-7f34-0189ef49c1a1/volume/bokeh_1593187606262/work
 boto==2.49.0
 Bottleneck==1.3.2
@@ -45,7 +45,7 @@ conda-build==3.22.0
 conda-package-handling==1.7.0+0.g7c4a471.dirty
 conda-verify==3.4.2
 contextlib2==0.6.0.post1
-cryptography==2.9.2
+cryptography>=3.2
 cssselect==1.1.0
 cssutils==2.5.0
 cycler==0.10.0
@@ -100,7 +100,7 @@ isort==4.3.21
 itsdangerous==1.1.0
 jdcal==1.4.1
 jedi @ file:///opt/concourse/worker/volumes/live/1c5c293b-9147-4b4b-5a7f-d3f5eddb8470/volume/jedi_1592841952519/work
-Jinja2==2.11.2
+jinja2>=2.11.3
 joblib @ file:///tmp/build/80754af9/joblib_1594236160679/work
 json5==0.9.5
 jsonschema @ file:///opt/concourse/worker/volumes/live/143dedb7-a810-4064-6e47-436d4dbcc943/volume/jsonschema_1594363611216/work
@@ -108,7 +108,7 @@ jupyter==1.0.0
 jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1594826976318/work
 jupyter-console==6.1.0
 jupyter-core==4.6.3
-jupyterlab==2.1.5
+jupyterlab>=2.2.10
 jupyterlab-server @ file:///tmp/build/80754af9/jupyterlab_server_1594164409481/work
 keyring @ file:///opt/concourse/worker/volumes/live/f2a8edc0-64b5-40f0-5d81-bbd31149cbe1/volume/keyring_1593109772159/work
 kiwisolver==1.2.0
@@ -136,10 +136,10 @@ nbformat==5.0.7
 networkx @ file:///tmp/build/80754af9/networkx_1594377231366/work
 nltk @ file:///tmp/build/80754af9/nltk_1592496090529/work
 nose @ file:///opt/concourse/worker/volumes/live/a029938e-1732-4cd8-5b98-0542283d158b/volume/nose_1594377915100/work
-notebook==6.0.3
+notebook>=6.4.12
 numba==0.50.1
 numexpr==2.7.1
-numpy==1.18.5
+numpy>=1.22
 numpydoc @ file:///tmp/build/80754af9/numpydoc_1594166760263/work
 olefile==0.46
 onedrivesdk==2.0.1
@@ -178,7 +178,7 @@ pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
 pycurl==7.43.0.5
 pydocstyle @ file:///tmp/build/80754af9/pydocstyle_1592848020240/work
 pyflakes==2.2.0
-Pygments==2.6.1
+Pygments>=2.7.4
 pylint @ file:///opt/concourse/worker/volumes/live/0a2a544e-806a-4267-74b2-a3f95578c3f2/volume/pylint_1592498630326/work
 pyodbc===4.0.0-unsupported
 pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1594392929924/work
@@ -191,7 +191,6 @@ python-jsonrpc-server @ file:///tmp/build/80754af9/python-jsonrpc-server_1594397
 python-language-server @ file:///opt/concourse/worker/volumes/live/5f0313b4-ff69-4d9d-5c31-e01b223dabd6/volume/python-language-server_1594161914367/work
 pytz==2020.1
 PyWavelets==1.1.1
-PyYAML==5.3.1
 pyzmq==19.0.1
 QDarkStyle==2.8.1
 QtAwesome==0.7.2
@@ -245,10 +244,10 @@ traitlets==4.3.3
 trio==0.21.0
 trio-websocket==0.9.2
 typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1592847887441/work
-ujson==1.35
+ujson>=5.4.0
 unicodecsv==0.14.1
 uritemplate==4.1.1
-urllib3==1.25.11
+urllib3>=1.26.5
 watchdog @ file:///opt/concourse/worker/volumes/live/cc0ee7bb-1065-44c4-5867-0fd5d13729e0/volume/watchdog_1593447373245/work
 wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
 webencodings==0.5.1
