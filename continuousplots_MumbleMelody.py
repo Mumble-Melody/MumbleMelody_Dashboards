@@ -26,7 +26,7 @@ from bokeh.embed import file_html
 
 # Initialize the app with a service account, granting admin privileges
 #os.system('pwd')
-cred = credentials.Certificate("/Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json")
+cred = credentials.Certificate("mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://mumble-melody-longitudinal-default-rtdb.firebaseio.com/'
 })
