@@ -37,7 +37,6 @@ jobs:
       - run: pip install chromedriver_binary
       - run: pip install seaborn
       - run: pip install bokeh
-      - run: python -m json.tool mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json
       - name: Replace tokens
         uses: cschleiden/replace-tokens@v1
         env:
@@ -45,6 +44,7 @@ jobs:
           FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
         with:
           files: 'mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json'
+      - run: python -m json.tool mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json
       - name: Run script
         env:
           FIREBASE_PRIVATE_KEY_ID: ${{ secrets.FIREBASE_PRIVATE_KEY_ID }}
