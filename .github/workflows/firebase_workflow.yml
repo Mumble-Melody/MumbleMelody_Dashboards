@@ -24,13 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - name: Replace tokens
-        uses: cschleiden/replace-tokens@v1
-        with:
-          files: 'mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json'
-        env:
-          FIREBASE_PRIVATE_KEY_ID: ${{ secrets.FIREBASE_PRIVATE_KEY_ID }}
-          FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
       - name: setup python
         uses: actions/setup-python@v2
         with:
@@ -43,6 +36,13 @@ jobs:
       - run: pip install chromedriver_binary
       - run: pip install seaborn
       - run: pip install bokeh
+      - name: Replace tokens
+        uses: cschleiden/replace-tokens@v1
+        with:
+          files: 'mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json'
+        env:
+          FIREBASE_PRIVATE_KEY_ID: ${{ secrets.FIREBASE_PRIVATE_KEY_ID }}
+          FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
       - run: python -m json.tool mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json
       - name: Run script
         run: python continuousplots_MumbleMelody.py
