@@ -43,6 +43,7 @@ jobs:
       - run: pip install selenium
       - run: pip install chromedriver_binary
       - run: pip install seaborn
+      - run: pip install bokeh
       - name: Run script
         run: python continuousplots_MumbleMelody.py
 
