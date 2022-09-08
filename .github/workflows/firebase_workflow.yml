@@ -29,6 +29,14 @@ jobs:
         env:
           FIREBASE_PRIVATE_KEY_ID: ${{ secrets.FIREBASE_PRIVATE_KEY_ID }}
           FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
+          
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - name: Run script
+        uses: jannekem/run-python-script-action@v1.2
+        with:
+          script: continuousplots_MumbleMelody.py
+        
 
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
