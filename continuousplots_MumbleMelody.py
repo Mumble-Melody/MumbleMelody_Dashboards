@@ -28,7 +28,7 @@ from bokeh.embed import file_html
 #FIREBASE_PRIVATE_KEY_ID = os.environ['FIREBASE_PRIVATE_KEY_ID']
 #FIREBASE_PRIVATE_KEY = os.environ['FIREBASE_PRIVATE_KEY']
 
-#import json
+import json
 #
 with open('mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json', 'r+') as f:
     firebase_json = json.load(f)
