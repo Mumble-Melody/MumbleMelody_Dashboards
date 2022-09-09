@@ -55,6 +55,8 @@ jobs:
         run: git status
       - name: stage changed files
         run: git add .
+      - run: git config user.email "akodiba1@jhu.edu"
+      - run: git config user.name "alishakodibagkar"
       - name: commit changed files
         run: git commit -m "Auto updating images.txt"
       - name: fetch from main
