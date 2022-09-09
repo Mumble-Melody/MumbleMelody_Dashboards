@@ -139,7 +139,7 @@ nose @ file:///opt/concourse/worker/volumes/live/a029938e-1732-4cd8-5b98-0542283
 notebook>=6.4.12
 numba==0.50.1
 numexpr==2.7.1
-numpy>=1.22
+numpy==1.18.5
 numpydoc @ file:///tmp/build/80754af9/numpydoc_1594166760263/work
 olefile==0.46
 onedrivesdk==2.0.1
