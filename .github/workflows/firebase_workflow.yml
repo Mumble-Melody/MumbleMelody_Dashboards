@@ -5,8 +5,8 @@ name: CI
 # Controls when the workflow will run
 on:
   schedule:
-    # Runs every 5 min
-    - cron: '*/5 * * * *'
+    # Runs every 12 hours (0:00 and 12:00 UTC)
+    - cron: '0 */12 * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
