@@ -208,7 +208,7 @@ total_unique_users = 0;
 user_list = [];
 user_list_basedonday = [ [] for _ in range(dayssincestart)]
 
-#create a list of the previous 7 days (not including the current day)
+#create a list of the previous days (not including the current day)
 dates = [];
 for i in range(dayssincestart,0,-1):
     dates.append(str(today-timedelta(days=i)))
@@ -526,6 +526,15 @@ p.legend.location = "top_right"
 p.xaxis.major_label_orientation = math.pi/2
 #show(p)
 export_png(p, filename=(today_save_filepath + 'Fig4.png'))
+
+
+#Add time of change to log
+current_datetime_string = str(current_datetime)
+add_to_log = "Updated images on: " + current_datetime_string + "\n"
+
+log = open("log.txt", "a")
+log.write(add_to_log)
+log.close()
 
 #Push changes to Github
 #os.system('/usr/bin/git -C /Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards add .')
