@@ -33,19 +33,21 @@ jobs:
       - run: pip install seaborn
       - run: pip install bokeh
       - run: pip install IPython
+      - run: cp mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0-temp.json 
       - name: Replace tokens
         uses: cschleiden/replace-tokens@v1
         env:
           FIREBASE_PRIVATE_KEY_ID: ${{ secrets.FIREBASE_PRIVATE_KEY_ID }}
           FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
         with:
-          files: 'mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json'
-      - run: python -m json.tool mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json
+          files: 'mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0-temp.json'
       - name: Run script
         env:
           FIREBASE_PRIVATE_KEY_ID: ${{ secrets.FIREBASE_PRIVATE_KEY_ID }}
           FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
         run: python continuousplots_MumbleMelody.py
+      - name: Remove temp json file
+        run: rm mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0-temp.json
       - name: check for changes
         run: git status
       - name: stage changed files
