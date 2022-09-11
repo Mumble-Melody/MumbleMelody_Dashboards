@@ -1,4 +1,3 @@
-# This is a basic workflow to help you get started with Actions
 
 name: CI
 
@@ -7,6 +6,7 @@ on:
   schedule:
     # Runs every 12 hours (0:00 and 12:00 UTC)
     - cron: '0 */12 * * *'
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
