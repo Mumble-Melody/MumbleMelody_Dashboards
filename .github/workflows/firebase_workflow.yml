@@ -31,7 +31,7 @@ jobs:
       - run: pip install selenium
       - run: pip install chromedriver_binary
       - run: pip install seaborn
-      - run: pip install bokeh
+      - run: pip install --upgrade bokeh==2.4.3
       - run: pip install IPython
       - run: cp mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0.json mumble-melody-longitudinal-firebase-adminsdk-34x0r-52f98ad6f0-temp.json 
       - name: Replace tokens
