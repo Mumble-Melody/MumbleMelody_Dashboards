@@ -307,7 +307,7 @@ for key_subID in all_data:
                 #calculate durations: click mode --> Off/othermode/end of session
                 daynumber = dayssincestart - (today - key_date_object).days;
                 from datetime import datetime
-                format = '%H:%M:%S'
+                #format = '%H:%M:%S'
                 duration_start = False
                 duration_beginning = "";
                 duration_end = "";
@@ -322,7 +322,8 @@ for key_subID in all_data:
                         end_time = key_val
                         if key_val == "total session":
                             end_time = prev_key_val
-                        start_minus_end = datetime.strptime(end_time, format) - datetime.strptime(start_time, format)
+                        #start_minus_end = datetime.strptime(end_time, format) - datetime.strptime(start_time, format)
+                        start_minus_end = try_parsing_date(end_time) - try_parsing_date(start_time)
                         duration_toadd = start_minus_end.total_seconds()
                         total_durations_eachday_allusers[daynumber].append(duration_toadd)
                         total_durations_eachday_unaltered[daynumber].append(duration_toadd)
@@ -338,7 +339,8 @@ for key_subID in all_data:
                         end_time = key_val
                         if key_val == "total session":
                             end_time = prev_key_val
-                        start_minus_end = datetime.strptime(end_time, format) - datetime.strptime(start_time, format)
+                        #start_minus_end = datetime.strptime(end_time, format) - datetime.strptime(start_time, format)
+                        start_minus_end = try_parsing_date(end_time) - try_parsing_date(start_time)
                         duration_toadd = start_minus_end.total_seconds()
                         total_durations_eachday_allusers[daynumber].append(duration_toadd)
                         total_durations_eachday_whisper[daynumber].append(duration_toadd)
@@ -354,7 +356,8 @@ for key_subID in all_data:
                         end_time = key_val
                         if key_val == "total session":
                             end_time = prev_key_val
-                        start_minus_end = datetime.strptime(end_time, format) - datetime.strptime(start_time, format)
+                        #start_minus_end = datetime.strptime(end_time, format) - datetime.strptime(start_time, format)
+                        start_minus_end = try_parsing_date(end_time) - try_parsing_date(start_time)
                         duration_toadd = start_minus_end.total_seconds()
                         total_durations_eachday_allusers[daynumber].append(duration_toadd)
                         total_durations_eachday_reverb[daynumber].append(duration_toadd)
@@ -370,7 +373,8 @@ for key_subID in all_data:
                         end_time = key_val
                         if key_val == "total session":
                             end_time = prev_key_val
-                        start_minus_end = datetime.strptime(end_time, format) - datetime.strptime(start_time, format)
+                        #start_minus_end = datetime.strptime(end_time, format) - datetime.strptime(start_time, format)
+                        start_minus_end = try_parsing_date(end_time) - try_parsing_date(start_time)
                         duration_toadd = start_minus_end.total_seconds()
                         total_durations_eachday_allusers[daynumber].append(duration_toadd)
                         total_durations_eachday_harmonize[daynumber].append(duration_toadd)
