@@ -72,6 +72,18 @@ startdate = date(2022, 7, 22)
 delta = today - startdate
 dayssincestart = delta.days
 
+def try_parsing_date(key_datetime):
+    for fmt in ('%Y-%m-%d %H:%M:%S +0000','%Y-%m-%d %H:%M:%S:%f %z'):
+        #2023-01-26 21:53:19:164 +GMT-05:00
+        try:
+            if ":" == key_datetime[-3:-2]:
+                key_datetime = key_datetime[:-3]+key_datetime[-2:]
+                key_datetime = key_datetime[:-8]+key_datetime[-4:]
+            return datetime.strptime(key_datetime, fmt)
+        except ValueError:
+            pass
+    raise ValueError('no valid date format found')
+
 
 #1. Number of New Devices
 #We want to find all subjects who downloaded the app since the start date
@@ -101,7 +113,7 @@ for key_subID in all_data:
             if access_number == 1:
 
                 #save # of first access downloads for the last 7 days
-                key_datetime_object = datetime.strptime(key_datetime, '%Y-%m-%d %H:%M:%S +0000')
+                key_datetime_object = try_parsing_date(key_datetime)
                 key_date_object = key_datetime_object.date()
                 if ((today - key_date_object).days < dayssincestart+1) and ((today - key_date_object).days > 0) :
                     daynumber = dayssincestart - (today - key_date_object).days;
@@ -132,13 +144,13 @@ for key_subID in new_user_list:
             if access_number == 1:
 
                 #save day number of first access
-                key_datetime_object = datetime.strptime(key_datetime, '%Y-%m-%d %H:%M:%S +0000')
+                key_datetime_object = try_parsing_date(key_datetime)
                 key_date_object = key_datetime_object.date()
                 if ((today - key_date_object).days < dayssincestart+1) and ((today - key_date_object).days > 0) :
                     daynumber =dayssincestart - (today - key_date_object).days;
    
             else:
-                key_datetime_object = datetime.strptime(key_datetime, '%Y-%m-%d %H:%M:%S +0000')
+                key_datetime_object = try_parsing_date(key_datetime)
                 key_date_object = key_datetime_object.date()
                 daynumber_tocompare = dayssincestart - (today - key_date_object).days;
                 if daynumber_tocompare > daynumber:
@@ -225,7 +237,7 @@ for key_subID in all_data:
     if sub_developer == 0:
     
         for key_datetime in all_data[key_subID]:
-            key_datetime_object = datetime.strptime(key_datetime, '%Y-%m-%d %H:%M:%S +0000')
+            key_datetime_object = try_parsing_date(key_datetime)
             key_date_object = key_datetime_object.date()
             if ((today - key_date_object).days < dayssincestart+1) and ((today - key_date_object).days > 0) :
                 daynumber = dayssincestart - (today - key_date_object).days;
@@ -277,7 +289,7 @@ for key_subID in all_data:
         for key_datetime in all_data[key_subID]:
             
             #retrieve date
-            key_datetime_object = datetime.strptime(key_datetime, '%Y-%m-%d %H:%M:%S +0000')
+            key_datetime_object = try_parsing_date(key_datetime)
             key_date_object = key_datetime_object.date()
    
             # if the date is within the last 7 days
@@ -492,7 +504,7 @@ for key_subID in all_data:
         for key_datetime in all_data[key_subID]:
             
             #retrieve date
-            key_datetime_object = datetime.strptime(key_datetime, '%Y-%m-%d %H:%M:%S +0000')
+            key_datetime_object = try_parsing_date(key_datetime)
             key_date_object = key_datetime_object.date()
    
             # if the date is within the last 7 days
