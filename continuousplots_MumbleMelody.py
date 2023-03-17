@@ -73,12 +73,8 @@ delta = today - startdate
 dayssincestart = delta.days
 
 def try_parsing_date(key_datetime):
-    for fmt in ('%Y-%m-%d %H:%M:%S +0000','%Y-%m-%d %H:%M:%S:%f %z'):
-        #2023-01-26 21:53:19:164 +GMT-05:00
+    for fmt in ('%Y-%m-%d %H:%M:%S +0000','%Y-%m-%d %H:%M:%S:%f +GMT%z','%H:%M:%S'):
         try:
-            if ":" == key_datetime[-3:-2]:
-                key_datetime = key_datetime[:-3]+key_datetime[-2:]
-                key_datetime = key_datetime[:-8]+key_datetime[-4:]
             return datetime.strptime(key_datetime, fmt)
         except ValueError:
             pass
