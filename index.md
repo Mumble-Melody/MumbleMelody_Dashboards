@@ -1,6 +1,6 @@
 ### Below is some information on usage of the Mumble Melody app~: 
 
-<<insertHTML:[fig1.html]
+![](./fig1.html)
 
 ![Fig1](/images/Fig1.png)
 
