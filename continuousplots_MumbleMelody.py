@@ -206,7 +206,11 @@ p.yaxis.axis_label = 'Number of New Users'
 p.xaxis.major_label_orientation = math.pi/2
 p.line(dates,num_newdownloads,line_width = 2, color = "blue")
 #show(p)
-export_png(p, filename=(today_save_filepath + 'Fig1.png'))
+#export_png(p, filename=(today_save_filepath + 'Fig1.png'))
+
+html_fig1 = file_html(p, CDN, "fig1")
+with open("fig1.html", "w") as file:
+    file.write(html_fig1)
 
 #2. Number of Unique Users Per Day
 
@@ -259,7 +263,11 @@ p.yaxis.axis_label = 'Number of Unique Users'
 p.xaxis.major_label_orientation = math.pi/2
 p.line(dates, users_per_day_toplot,line_width = 2, color = "blue")
 #show(p)
-export_png(p, filename=(today_save_filepath + 'Fig2.png'))
+#export_png(p, filename=(today_save_filepath + 'Fig2.png'))
+
+html_fig2 = file_html(p, CDN, "fig2")
+with open("fig2.html", "w") as file:
+    file.write(html_fig2)
 
 #3. Duration per day for all users: mean/median/min/max
 
@@ -479,7 +487,11 @@ p.xaxis.major_label_orientation = math.pi/2
 p.xaxis.axis_label = 'Date'
              
 #show(p)
-export_png(p, filename=(today_save_filepath + 'Fig3.png'))
+#export_png(p, filename=(today_save_filepath + 'Fig3.png'))
+
+html_fig3 = file_html(p, CDN, "fig3")
+with open("fig3.html", "w") as file:
+    file.write(html_fig3)
 
 #4. Mode Usage
 
@@ -537,7 +549,11 @@ p.line(dates,harmonize_mode_totaluses,line_width = 2, color = "pink",legend_labe
 p.legend.location = "top_right"
 p.xaxis.major_label_orientation = math.pi/2
 #show(p)
-export_png(p, filename=(today_save_filepath + 'Fig4.png'))
+#export_png(p, filename=(today_save_filepath + 'Fig4.png'))
+
+html_fig4 = file_html(p, CDN, "fig4")
+with open("fig4.html", "w") as file:
+    file.write(html_fig4)
 
 
 #Add time of change to log
