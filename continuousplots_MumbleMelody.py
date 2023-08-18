@@ -555,6 +555,20 @@ html_fig4 = file_html(p, CDN, "fig4")
 with open("fig4.html", "w") as file:
     file.write(html_fig4)
 
+#Add combined htmls
+with open("all_data.html", "w") as file:
+        with open("fig1.html", 'r') as input:
+            file.write(input.read())
+            file.write('\n')
+        with open("fig2.html", 'r') as input:
+            file.write(input.read())
+            file.write('\n')  # Add a line break between files
+        with open("fig3.html", 'r') as input:
+            file.write(input.read())
+            file.write('\n')  # Add a line break between files
+        with open("fig4.html", 'r') as input:
+            file.write(input.read())
+            file.write('\n')  # Add a line break between files
 
 #Add time of change to log
 current_datetime_string = str(current_datetime)
@@ -563,6 +577,7 @@ add_to_log = "Updated images on: " + current_datetime_string + "\n"
 log = open("log.txt", "a")
 log.write(add_to_log)
 log.close()
+
 
 #Push changes to Github
 #os.system('/usr/bin/git -C /Users/alishakodibagkar/MIT/Mumble_Melody_Firebase/MumbleMelody_Dashboards add .')
