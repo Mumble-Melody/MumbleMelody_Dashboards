@@ -6,6 +6,7 @@ from datetime import datetime
 from datetime import date
 from datetime import timedelta
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import os
 #from os.path import exists
@@ -19,10 +20,11 @@ import chromedriver_binary  # Adds chromedriver binary to path
 import seaborn as sns
 from bokeh.plotting import figure, output_notebook, show, save, output_file
 from bokeh.io import export_png
-from bokeh.models import Range1d, ColumnDataSource
+from bokeh.models import Range1d, ColumnDataSource, Slider
 from bokeh.transform import dodge
 from bokeh.resources import CDN
 from bokeh.embed import file_html
+from bokeh.layouts import column
 
 # Initialize the app with a service account, granting admin privileges
 FIREBASE_PRIVATE_KEY_ID = os.environ['FIREBASE_PRIVATE_KEY_ID']
@@ -205,6 +207,9 @@ p.xaxis.axis_label = 'Date'
 p.yaxis.axis_label = 'Number of New Users'
 p.xaxis.major_label_orientation = math.pi/2
 p.line(dates,num_newdownloads,line_width = 2, color = "blue")
+
+
+
 #show(p)
 #export_png(p, filename=(today_save_filepath + 'Fig1.png'))
 
