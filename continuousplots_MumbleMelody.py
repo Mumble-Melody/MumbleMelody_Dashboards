@@ -557,18 +557,18 @@ with open("fig4.html", "w") as file:
 
 #Add combined htmls
 with open("all_data.html", "w") as file:
-        with open("fig1.html", 'r') as input:
-            file.write(input.read())
-            file.write('\n')
-        with open("fig2.html", 'r') as input:
-            file.write(input.read())
-            file.write('\n')  # Add a line break between files
-        with open("fig3.html", 'r') as input:
-            file.write(input.read())
-            file.write('\n')  # Add a line break between files
-        with open("fig4.html", 'r') as input:
-            file.write(input.read())
-            file.write('\n')  # Add a line break between files
+    with open("fig1.html", 'r') as input:
+        file.write(input.read())
+        file.write('\n')
+    with open("fig2.html", 'r') as input:
+        file.write(input.read())
+        file.write('\n')  # Add a line break between files
+    with open("fig3.html", 'r') as input:
+        file.write(input.read())
+        file.write('\n')  # Add a line break between files
+    with open("fig4.html", 'r') as input:
+        file.write(input.read())
+        file.write('\n')  # Add a line break between files
 
 #Add time of change to log
 current_datetime_string = str(current_datetime)
