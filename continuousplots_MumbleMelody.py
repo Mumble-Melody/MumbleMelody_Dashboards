@@ -20,7 +20,7 @@ import chromedriver_binary  # Adds chromedriver binary to path
 import seaborn as sns
 from bokeh.plotting import figure, output_notebook, show, save, output_file
 from bokeh.io import export_png
-from bokeh.models import Range1d, ColumnDataSource, Slider
+from bokeh.models import Range1d, ColumnDataSource, Slider, CustomJS, DateRangeSlider, DatetimeTickFormatter, FixedTicker
 from bokeh.transform import dodge
 from bokeh.resources import CDN
 from bokeh.embed import file_html
