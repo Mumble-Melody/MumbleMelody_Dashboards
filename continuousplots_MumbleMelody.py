@@ -281,7 +281,7 @@ layout = column(slider, p)
 #show(p)
 #export_png(p, filename=(today_save_filepath + 'Fig1.png'))
 
-html_fig1 = file_html(p, CDN, "fig1")
+html_fig1 = file_html(layout, CDN, "fig1")
 with open("fig1.html", "w") as file:
     file.write(html_fig1)
 
@@ -410,7 +410,7 @@ layout = column(slider, p)
 #show(p)
 #export_png(p, filename=(today_save_filepath + 'Fig2.png'))
 
-html_fig2 = file_html(p, CDN, "fig2")
+html_fig2 = file_html(layout, CDN, "fig2")
 with open("fig2.html", "w") as file:
     file.write(html_fig2)
 
@@ -864,7 +864,7 @@ layout = column(slider, p)
 #show(p)
 #export_png(p, filename=(today_save_filepath + 'Fig3.png'))
 
-html_fig3 = file_html(p, CDN, "fig3")
+html_fig3 = file_html(layout, CDN, "fig3")
 with open("fig3.html", "w") as file:
     file.write(html_fig3)
 
@@ -1076,7 +1076,7 @@ layout = column(slider, p)
 #show(p)
 #export_png(p, filename=(today_save_filepath + 'Fig4.png'))
 
-html_fig4 = file_html(p, CDN, "fig4")
+html_fig4 = file_html(layout, CDN, "fig4")
 with open("fig4.html", "w") as file:
     file.write(html_fig4)
 
